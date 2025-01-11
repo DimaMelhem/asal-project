@@ -197,3 +197,36 @@ const addTask = (task) => {
             taskText.style.textDecoration = 'none';
         }
     });
+
+    taskIcons.appendChild(checkbox);
+    taskIcons.appendChild(editIcon);
+    taskIcons.appendChild(trashIcon);
+
+    taskItem.appendChild(taskText);
+    taskItem.appendChild(taskIcons);
+
+    taskList.appendChild(taskItem);
+};
+
+// Function to filter tasks by status (all, done, todo)
+const filterTasks = (filter) => { 
+    const tasks = document.querySelectorAll('.taskItem'); 
+    tasks.forEach(task => { 
+        const checkbox = task.querySelector('.checkbox-green'); 
+        if (filter === 'all') { 
+            task.style.display = 'flex'; 
+        } else if (filter === 'done') { 
+            if (checkbox.checked) { 
+                task.style.display = 'flex'; 
+            } else { 
+                task.style.display = 'none'; 
+            } 
+        } else if (filter === 'todo') { 
+            if (!checkbox.checked) { 
+                task.style.display = 'flex'; 
+            } else { 
+                task.style.display = 'none'; 
+            } 
+        } 
+    }); 
+};
