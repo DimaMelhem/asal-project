@@ -1,4 +1,17 @@
-
+/* iPhone XR */
+@media (max-width: 414px) {
+    /* CSS for mobile view */
+  }
+  
+  /* iPad Pro */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* CSS for tablet view */
+  }
+  
+  /* Desktop */
+  @media (min-width: 1025px) {
+    /* CSS for desktop view */
+  }
 .h1_todoinput 
 {
     margin-top: 3rem;
